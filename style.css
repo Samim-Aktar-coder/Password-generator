@@ -1,0 +1,126 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body {
+    background-color: #062b4e;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    width: 50%;
+}
+
+.container h1 {
+    font-size: 3rem;
+    font-weight: 400;
+    margin-bottom: 3rem;
+}
+
+.container h1 span {
+    color: #07975b;
+    border-bottom: 3px solid #07975b;
+    padding-bottom: 1rem;
+}
+
+.input__control {
+    background-color: white;
+    height: 3.5rem;
+    width: 80%;
+    border-radius: .2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-inline: .5rem;
+}
+
+.input__control input {
+    border: none;
+    outline: none;
+    background-color: transparent;
+    height: 100%;
+    width: 90%;
+    color: black;
+    font-size: 1.3rem;
+}
+
+.input__control i {
+    color: #07975b;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+.options__box {
+    margin-block: .5rem 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.option {
+    display: flex;
+    align-items: center;
+    gap: .2rem;
+}
+
+.option input {
+    accent-color: #07975b;
+}
+
+.word {
+    pointer-events: none;
+}
+
+.password-length input {
+    border: none;
+    outline: none;
+    width: 4rem;
+    height: 2rem;
+    color: #025c36;
+    font-size: 1.1rem;
+    font-weight: 600;
+    padding: 0 .5rem;
+}
+
+.generate__btn {
+    background-color: #07975b;
+    height: 3.5rem;
+    border: 2px solid #07975b;
+    outline: none;
+    padding: 0 .7rem;
+    font-size: 1.2rem;
+    border-radius: .3rem;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.generate__btn:hover {
+    background: transparent;
+}
+
+.modal {
+    background-color: white;
+    color: #07975b;
+    font-size: 1.2rem;
+    padding: .7rem 1.6rem;
+    border: 2px solid #07975b;
+    border-radius: .4rem;
+    position: absolute;
+    left: 25%;
+    bottom: 4rem;
+    opacity: 0;
+    pointer-events: none;
+    transition: .5s;
+}
+
+.modal.show {
+    bottom: 5.5rem;
+    opacity: 1;
+}
