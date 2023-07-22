@@ -148,7 +148,8 @@ body {
 
 @media screen and (max-width:800px) {
     .container{
-        width: 90%;
+        width: 95%;
+        border: 1px solid white;
     }
     .container h1{
         font-size: 2.5rem;
@@ -156,6 +157,13 @@ body {
 
     .container h1 span{
         border-bottom: none;
+    }
+    .input__control{
+        width: 100%;
+    }
+
+    .input__control input{
+        width: 100%;
     }
     .options__box{
         flex-wrap: wrap;
