@@ -5,21 +5,13 @@ let alphabet = document.querySelector('.word input');
 let number = document.querySelector('.numbers input');
 let specialCharacter = document.querySelector('.special-character input');
 let passwordLength = document.querySelector('.password-length input');
+let passwordWarning = document.querySelector('.password-length p');
 let modal = document.querySelector('.modal');
 
 let isNumberAdded = number.checked;
 let isSpecialCharacterAdded = specialCharacter.checked;
 let passwordLengthValue = +passwordLength.value;
 
-passwordLength.addEventListener('click', () => {
-    if (passwordLengthValue < 6) {
-        passwordLengthValue = 3;
-    } else if (passwordLengthValue > 20) {
-        passwordLengthValue = 20;
-    } else {
-        passwordLengthValue = +passwordLength.value;
-    }
-});
 
 
 number.addEventListener('click', () => {
@@ -31,6 +23,17 @@ specialCharacter.addEventListener('click', () => {
 });
 
 generatePasswordBtn.addEventListener('click', () => {
+    if (passwordLength.value < 6) {
+        passwordLengthValue = 6;
+        passwordWarning.classList.add('show');
+    } else if (passwordLength.value > 20) {
+        passwordLengthValue = 20;
+        passwordWarning.classList.add('show');
+    } else {
+        passwordLengthValue = +passwordLength.value;
+        passwordWarning.classList.remove('show');
+    }
+
     let password = '';
     for (let i = 1; i <= passwordLengthValue; i++) {
         if (!isNumberAdded && !isSpecialCharacterAdded) {
@@ -88,7 +91,7 @@ copyBtn.addEventListener('click', () => {
     if (input.value) {
         modal.classList.add('show');
     }
-    
+
     setTimeout(() => {
         modal.classList.remove('show');
     }, 1500);

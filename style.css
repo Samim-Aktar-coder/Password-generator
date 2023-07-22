@@ -58,9 +58,9 @@ body {
 }
 
 .options__box {
-    margin-block: .5rem 1.5rem;
+    margin-block: 1rem 1.5rem;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     gap: 2rem;
 }
 
@@ -78,6 +78,11 @@ body {
     pointer-events: none;
 }
 
+.password-length{
+    flex-direction: column;
+    align-items: flex-start;
+}
+
 .password-length input {
     border: none;
     outline: none;
@@ -87,6 +92,16 @@ body {
     font-size: 1.1rem;
     font-weight: 600;
     padding: 0 .5rem;
+}
+
+.password-length p{
+    font-size: .8rem;
+    color: rgb(255, 68, 68);
+    display: none;
+}
+
+.password-length p.show{
+    display: block;
 }
 
 .generate__btn {
@@ -123,4 +138,28 @@ body {
 .modal.show {
     bottom: 5.5rem;
     opacity: 1;
+}
+
+@media screen and (max-width:1050px) {
+    .container{
+        width: 70%;
+    }
+}
+
+@media screen and (max-width:800px) {
+    .container{
+        width: 90%;
+    }
+    .container h1{
+        font-size: 2.5rem;
+    }
+
+    .container h1 span{
+        border-bottom: none;
+    }
+    .options__box{
+        flex-wrap: wrap;
+        row-gap: .5rem;
+        margin-top: 1rem;
+    }
 }
