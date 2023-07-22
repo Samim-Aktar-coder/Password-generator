@@ -149,7 +149,6 @@ body {
 @media screen and (max-width:800px) {
     .container{
         width: 95%;
-        border: 1px solid white;
     }
     .container h1{
         font-size: 2.5rem;
@@ -167,7 +166,7 @@ body {
     }
     .options__box{
         flex-wrap: wrap;
-        row-gap: .5rem;
-        margin-top: 1rem;
+        row-gap: .6rem;
+        justify-content: space-between;
     }
 }
