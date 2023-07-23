@@ -51,26 +51,26 @@ generatePasswordBtn.addEventListener('click', () => {
 function generateSingleCharacter() {
 
     let singleLetter = '';
-    let funnyWords = ["IDon'tKnow", "Incorrect", "Password", "Nothing", "WrongPassword", "Everything", "You'reaLoser", "GetLost", "BadBoy", "ineedapassword", "newpassword", "IamACompleteIdiot", " iforgot", "password123", " masterpassword", "ImNoMan", "Oreocookies", "GalileoGalileo", "ISaidMaybe", "Pretty_Fly_For_A_Wi-Fi", "SayMyName", "TheyAreWatching", "TakeBackTheEmpire", "404Network", "UmbrellaCorporation", "IWillLoseMyTemper", "MotherOfDragons", "doubleclick", "passwordforoldpeople", 'IamIronMan', 'BringMeThanos'];
+    let funnyWords = ["IDontKnow", "Incorrect", "Password", "Nothing", "WrongPassword", "Everything", "YouareaLoser", "GetLost", "BadBoy", "ineedapassword", "newpassword", "IamACompleteIdiot", " iforgot", "password123", " masterpassword", "ImNoMan", "Oreocookies", "GalileoGalileo", "ISaidMaybe", "Pretty_Fly_For_A_Wi-Fi", "SayMyName", "TheyAreWatching", "TakeBackTheEmpire", "404Network", "UmbrellaCorporation", "IWillLoseMyTemper", "MotherOfDragons", "doubleclick", "passwordforoldpeople", 'IamIronMan', 'BringMeThanos'];
     let letters = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'];
     let numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0];
     let specialCharacters = ['~', '!', '@', '#', '$', '%', '&', '*', '_', '-', '+', '<', '?', '>', '/'];
 
     if (isNumberAdded && isSpecialCharacterAdded) {
 
-        let commonArray = [...letters, ...numbers, ...specialCharacters];
+        let commonArray = [...numbers, ...specialCharacters, ...letters, ...numbers, ...specialCharacters];
         let randomNumber = Math.floor(Math.random() * commonArray.length);
         singleLetter = commonArray[randomNumber];
 
     } else if (isNumberAdded) {
 
-        let commonArray = [...letters, ...numbers];
+        let commonArray = [...number, ...letters, ...numbers];
         let randomNumber = Math.floor(Math.random() * commonArray.length);
         singleLetter = commonArray[randomNumber];
 
     } else if (isSpecialCharacterAdded) {
 
-        let commonArray = [...letters, ...specialCharacters];
+        let commonArray = [...specialCharacters, ...letters, ...specialCharacters];
         let randomNumber = Math.floor(Math.random() * commonArray.length);
         singleLetter = commonArray[randomNumber];
 
