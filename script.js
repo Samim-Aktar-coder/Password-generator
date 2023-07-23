@@ -64,7 +64,7 @@ function generateSingleCharacter() {
 
     } else if (isNumberAdded) {
 
-        let commonArray = [...number, ...letters, ...numbers];
+        let commonArray = [...numbers, ...letters, ...numbers];
         let randomNumber = Math.floor(Math.random() * commonArray.length);
         singleLetter = commonArray[randomNumber];
 
