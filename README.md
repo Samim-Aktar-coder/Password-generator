@@ -1,4 +1,4 @@
-[![MasterHead](https://raw.githubusercontent.com/Samim-Aktar-coder/Password-generator/main/Github%20Banner.png)](https://top-password-generator.netlify.app)
+[![MasterHead](https://image-link-website.netlify.app/img/password-generator.png)](https://top-password-generator.netlify.app)
 
 ### Live: [Click Here](https://top-password-generator.netlify.app)
 
@@ -16,10 +16,9 @@ Tech stack I use to build this app:
 
 ## 🙋‍♂️ Author
 
-- [@SamimAktar](https://github.com/Samim-Aktar-coder)
+- [@SamimAktar](https://github.com/samimaktar-coder)
 
 ## Installation
-
 
 ```bash
     No installation Required
